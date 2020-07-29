@@ -1,0 +1,24 @@
+
+.sets-container {
+    display:flex;
+    flex-wrap: wrap;
+  }
+.set-container {
+    border:1px solid #000;
+    padding:20px;
+    margin: 10px;
+    width: 20em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.code {
+    margin: 1px;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
