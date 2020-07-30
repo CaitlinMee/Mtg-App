@@ -4,5 +4,5 @@ export class Set {
     block: string;
     expansion: string;
     releaseDate: number;
-    border: string;
+    border: any;
 }

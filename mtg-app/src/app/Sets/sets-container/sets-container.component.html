@@ -1,5 +1,5 @@
 <div class="sets-container">
-    <div class="set-container" *ngFor="let set of Set" [ngStyle]="{'background-color':set.border === 'silver' ? 'silver' : 'white' }">
+    <div class="set-container" *ngFor="let set of Set | paginate: {itemsPerPage: pageSize, currentPage: page, totalItems: Total}" [ngStyle]="{'background-color':set.border === 'silver' ? 'silver' : 'white' }">
         <div>
             <p class="code">{{set.code}}</p>
         </div>
@@ -11,4 +11,6 @@
             <p>{{set.border}}</p>
         </div>
     </div>
+    <pagination-controls (pageChange)="handlePageChange($event)">
+    </pagination-controls>
 </div>

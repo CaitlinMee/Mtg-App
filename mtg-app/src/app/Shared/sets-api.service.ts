@@ -3,8 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Set } from './set';
 import { Observable, throwError } from 'rxjs'; //handles asynchronous operations and errors in this demo app.
 import { retry, catchError, map } from 'rxjs/operators'; //handles asynchronous operations and errors in this demo app.
-import { queryPaginated } from './pagination-query';
-import { Page } from './pagination-page';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +27,6 @@ httpOptions = {
   })
 }
 
-list(urlOrFilter?: string | object): Observable<Page<Set>> {
-  return queryPaginated<Set>(this.http, this.apiURL, urlOrFilter)
-}
 
 // HttpClient API get() method => Fetch sets list
 getSets(): Observable<Set> {
